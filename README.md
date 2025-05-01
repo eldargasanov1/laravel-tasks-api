@@ -2,9 +2,9 @@
 
 ## Auth Token
 ```json
-Authorization: [
+{
     "Bearer": "1|nn0V6pj1g0Ko0c3crW7jiRlAFILKozJezMpuwHLv8bcfe8b1"
-]
+}
 ```
 ## Routes
 ### Создание задачи:
