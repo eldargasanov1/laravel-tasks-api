@@ -72,6 +72,6 @@ async function deleteTask(task_id) {
 
     const response = await fetch(request);
     const result = await response.json()
-    console.log(result.data);
+    console.log(result);
 }
 ```
