@@ -1,11 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-## Auth Token
-```json
-{
-    "Bearer": "1|nn0V6pj1g0Ko0c3crW7jiRlAFILKozJezMpuwHLv8bcfe8b1"
-}
-```
 ## Routes
 ### Создание задачи:
 ```js
