@@ -26,18 +26,16 @@ php artisan db:seed
 
 # Готово!
 ```
-## Авторизация
-```json
-{
-    "Authorization": "Bearer <token>"
-}
-```
 ## Routes
+Перед выполнением запроса необходимо в **_headers_** указать полученный **_токен авторизации_**.
 ### Создание задачи:
 ```js
 async function createTask() {
     const request = new Request("/api/tasks", {
         method: "POST",
+        headers: {
+            'Authorization': 'Bearer <token>'
+        },
         body: JSON.stringify({
             "title": "Task title",
             "description": "Task description"
@@ -53,7 +51,10 @@ async function createTask() {
 ```js
 async function getTasks() {
     const request = new Request("/api/tasks", {
-        method: "GET"
+        method: "GET",
+        headers: {
+            'Authorization': 'Bearer <token>'
+        },
     });
 
     const response = await fetch(request);
@@ -65,7 +66,10 @@ async function getTasks() {
 ```js
 async function getTask(task_id) {
     const request = new Request(`/api/tasks/${task_id}`, {
-        method: "GET"
+        method: "GET",
+        headers: {
+            'Authorization': 'Bearer <token>'
+        },
     });
 
     const response = await fetch(request);
@@ -78,6 +82,9 @@ async function getTask(task_id) {
 async function updateTask(task_id) {
     const request = new Request(`/api/tasks/${task_id}`, {
         method: "PATCH",
+        headers: {
+            'Authorization': 'Bearer <token>'
+        },
         body: JSON.stringify({
             "title": "Task title | New",
             "description": "Task description | New"
@@ -93,7 +100,10 @@ async function updateTask(task_id) {
 ```js
 async function deleteTask(task_id) {
     const request = new Request(`/api/tasks/${task_id}`, {
-        method: "DELETE"
+        method: "DELETE",
+        headers: {
+            'Authorization': 'Bearer <token>'
+        },
     });
 
     const response = await fetch(request);
