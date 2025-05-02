@@ -8,6 +8,12 @@
 composer install
 npm install
 
+# Создание .env файла
+cp .\.env.example .\.env
+
+# Генерация ключа приложения
+php artisan key:generate
+
 # Миграция базы данных
 php artisan migrate
 
