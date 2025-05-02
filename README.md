@@ -18,6 +18,12 @@ php artisan db:seed
 
 # Готово!
 ```
+## Авторизация
+```json
+{
+    "Authorization": "Bearer <token>"
+}
+```
 ## Routes
 ### Создание задачи:
 ```js
