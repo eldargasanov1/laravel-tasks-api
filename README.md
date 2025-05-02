@@ -2,6 +2,8 @@
 
 ## Запуск
 ```shell
+# Запуск производился с помощью Laravel Herd
+
 # Установка зависимостей
 composer install
 npm install
