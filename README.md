@@ -1,28 +1,25 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-## Запуск
+## Запуск с помощью Laravel Sail
 ```shell
-# Запуск производился с помощью Laravel Herd
+# Клонирование проекта
+mkdir tasks
+cd tasks
 
-# Установка зависимостей
-composer install
-npm install
+git init
+git remote add origin https://github.com/eldargasanov1/laravel-tasks-api.git
+git pull origin main
 
-# Создание .env файла
-cp .\.env.example .\.env
+# Установка и запуск Laravel Sail
+composer require laravel/sail --dev
+cp .env.example .env
+php artisan sail:install -> Enter
+./vendor/bin/sail up -d
+./vendor/bin/sail artisan key:generate
+./vendor/bin/sail artisan make:main-user > Скопируйте токен из терминала
+./vendor/bin/sail artisan db:seed
 
-# Генерация ключа приложения
-php artisan key:generate
-
-# Миграция базы данных
-php artisan migrate
-
-# Создание пользователя для получения токена авторизации. Без него запросы будут отклоняться
-# Скопируйте токен авторизации из консоли
-php artisan make:main-user
-
-# Заполнение базы данных записями
-php artisan db:seed
+# Приложение запущено по адресу http://0.0.0.0/
 
 # Готово!
 ```
