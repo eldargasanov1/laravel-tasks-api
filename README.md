@@ -19,7 +19,7 @@ php artisan sail:install -> Enter
 ./vendor/bin/sail artisan make:main-user > Скопируйте токен из терминала
 ./vendor/bin/sail artisan db:seed
 
-# Приложение запущено по адресу http://0.0.0.0/
+# Приложение запущено по адресу http://127.0.0.1/
 
 # Готово!
 ```
